@@ -19,7 +19,7 @@ def main():
         n = int(sys.argv[2])
 
         if not isinstance(text, str) or not isinstance(n, int):
-            raise AssertionError("Invalid argument types.")
+            raise ValueError("Invalid argument types.")
 
         filtered_words = \
             list(ft_filter(lambda word: len(word) > n, text.split()))
